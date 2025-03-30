@@ -1,9 +1,18 @@
 .header {
-  padding-top: 20px;
-  padding-bottom: 100px;
+  padding-top: 36px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+}
+
+.name-logo {
+  font-family: 'Lora';
+  font-size: 24px;
+  line-height: 48px;
+  font-weight: bold;
+  color: var(--forest);
+  vertical-align: middle;
 }
 
 .header-links-container {
@@ -12,20 +21,22 @@
 }
 
 .header-link {
-  margin-left: 80px;
+  &:not(.name-logo):not(:first-child){
+    margin-left: 80px;
+  }
   font-weight: 600;
   letter-spacing: 0.5px;
   transition: 0.2s;
 }
 
 .header-link:hover {
-  color: #E95E5F;
+  color: var(--copper);
 }
 
-.current-route {
-  color: #E95E5F;
+.resume {
+  color: var(--dark-contrast);
+  text-decoration: none;
 }
-
 
 @media only screen and (max-width: 600px) {
   .header {
@@ -34,7 +45,19 @@
     font-size: 16px;
   }
 
+  .name-logo {
+    font-family: 'Lora';
+    font-size: 16px;
+    //line-height: 48px;
+  }
+
   .header-link {
-    margin-left: 30px;
+    &:not(.name-logo):not(:first-child){
+      margin-left: 20px;
+    }
+  }
+
+  .logo {
+    max-width: 40%;
   }
 }

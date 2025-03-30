@@ -1,18 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
 :root {
-  --side-padding: 10%;
+  --side-padding: 10vw;
+  --forest: #495235;
+  --beige: #EEE2D2;
+  --copper: #B87B5C;
+  --rust: #90533B;
+  --gold: #DA983C;
+  --olive: #B0BD97;
+  --dark-contrast: #272727;
+  --light-contrast: #FAFAFA;
+  --light-grey: #DDD;
+  --footer-height: 64px;
+  --header-height: 144px;
 }
 
 html, body { height: 100%; }
 
 body {
   margin: 0;
-  font-family: 'Manrope' !important;
+  font-family: 'Inter' !important;
   font-size: 18px;
+  background-color: #FAFAFA;
+
 }
 
 a {
   color: #FAFAFA;
+}
+
+hr {
+  border: solid 0.25px var(--olive);
+  margin: 50px 0px;
 }
 
 .pink {
@@ -20,19 +40,19 @@ a {
 }
 
 .full-min-height {
-  min-height: calc(100vh - 269px);//100vh minus height of header and footer combined
+  min-height: calc(100vh - calc(var(--header-height) + var(--footer-height)));//100vh minus height of header and footer combined
 }
 
 .full-min-height-no-footer {
-  min-height: calc(100vh - 168px);//100vh minus height of header
+  min-height: calc(100vh - var(--header-height));//100vh minus height of header
 }
 
 .full-height-no-footer {
-  height: calc(100vh - 168px);//100vh minus height of header
+  height: calc(100vh - var(--header-height));//100vh minus height of header
 }
 
 .full-min-height-no-header {
-  min-height: calc(100vh - 101px);//100vh minus height of footer
+  min-height: calc(100vh - var(--footer-height));//100vh minus height of footer
 }
 
 
@@ -43,12 +63,12 @@ a {
 
 .dark-bg {
   background-color: #191F33;
-  color: #FAFAFA;
+  color: var(--light-contrast);
 }
 
 .light-bg {
-  background-color: #E5E5E5;
-  color: #272727;
+  background-color: var(--light-contrast);
+  color: var(--dark-contrast);
 }
 
 .clickable {
@@ -146,12 +166,63 @@ a {
   padding-bottom: 50px;
 }
 
+.kind-words-blurb {
+  font-family: 'Lora';
+  font-size: 24px;
+  padding: 40px 80px;
+  margin-left: 0px;
+  border-radius: 10px;
+  background-color: var(--beige);
+  color: var(--forest);
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.blurb-hidden {
+  color: transparent;
+  transition: all 0.25s ease;
+}
+
+.blurb-source {
+  font-family: 'Inter';
+  font-size: 18px;
+  &:not(.blurb-hidden *){
+    color: var(--dark-contrast);
+  }
+  &.blurb-hidden{
+    height: 0px;
+  }
+}
+
 .mobile-only {
   display: none;
 }
 
+.nav-button {
+  font-family: 'Inter' !important;
+  font-size: 16px;
+  color: var(--forest);
+  height: 48px;
+  padding: 0px 24px !important;
+  background-color: var(--light-contrast);
+}
+
+.nav-button.mat-stroked-button:not(.mat-button-disabled) {
+  border-color: var(--forest);
+  border-radius: 24px;
+  transition: all 0.2s ease;
+  &:hover {
+    color: var(--light-contrast);
+    background-color:  var(--forest);
+  }
+}
 
 @media only screen and (max-width: 600px) {
+  :root {
+    --footer-height: 64px;
+    --header-height: 83px;
+    --side-padding: 5vw;
+  }
   .no-mobile {
     display: none;
   }
@@ -160,20 +231,15 @@ a {
     display: inherit;
     margin-bottom: 30px;
   }
-
-  .full-min-height {
-    min-height: calc(100vh - 172px);//100vh minus height of header and footer combined
+  
+  .kind-words-blurb {
+    font-family: 'Lora';
+    font-size: 16px;
+    padding: 15px 30px;
+    width: auto;
   }
 
-  .full-min-height-no-footer {
-    min-height: calc(100vh - 83px);//100vh minus height of header
-  }
-
-  .full-height-no-footer {
-    height: calc(100vh - 83px);//100vh minus height of header
-  }
-
-  .full-min-height-no-header {
-    min-height: calc(100vh - 89px);//100vh minus height of footer
+  .blurb-source {
+    font-size: 14px;
   }
 }

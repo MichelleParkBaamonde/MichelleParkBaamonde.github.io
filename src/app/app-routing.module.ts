@@ -8,6 +8,9 @@ import { SpotifyComponent } from './pages/case-studies/spotify/spotify.component
 import { ClearSkyComponent } from './pages/case-studies/clearsky/clearsky.component';
 import { PocketComponent } from './pages/case-studies/pocket/pocket.component';
 import { TemplateComponent } from './pages/case-studies/template/template.component';
+import { DesktopPOSComponent } from './pages/case-studies/desktop-pos/desktop-pos.component';
+import { DesignSystemComponent } from './pages/case-studies/design-system/design-system.component';
+import { MobilePOSComponent } from './pages/case-studies/mobile-pos/mobile-pos.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -17,6 +20,9 @@ const routes: Routes = [
   { path: 'spotify', component: SpotifyComponent },
   { path: 'clearsky', component: ClearSkyComponent },
   { path: 'pocket', component: PocketComponent },
+  { path: 'desktop-pos', component: DesktopPOSComponent },
+  { path: 'mobile-pos', component: MobilePOSComponent },
+  { path: 'design-system', component: DesignSystemComponent },
   { path: 'template', component: TemplateComponent },
   { path: '**', redirectTo: '' },
 ];

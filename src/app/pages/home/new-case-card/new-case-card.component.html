@@ -1,0 +1,16 @@
+<div class="case-card-container" [ngStyle]="styleList[index]" (click)="goToCase($event)">
+  <div class="card-info-container">
+    <div>
+      <span class="name">{{name}}</span>
+    </div>
+    <br>
+    <div class="description">{{description}}</div>
+  </div>
+  <div>
+    <div class="description">Read Case Study →</div>
+    <div class="thumbnail-container">
+      <img src="{{'/assets/' + imgPath + '.png'}}"
+      class="case-thumbnail">
+    </div>
+  </div>
+</div>

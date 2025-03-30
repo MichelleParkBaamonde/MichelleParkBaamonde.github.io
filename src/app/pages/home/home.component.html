@@ -1,61 +1,65 @@
 <div class="content-container home-container full-min-height">
-  <div class="dark-bg side-paddings full-height-no-footer">
+  <div class="side-paddings">
     <div class="home-intro">
       <div class="prof-pic">
-        <img src="assets/profile.png" style="width: 100%">
+        <img src="assets/Home/Profile.png" style="width: 100%">
       </div>
       <div class="intro-text-container">
         <span class="intro-text">
-          Hi, I’m Michelle, a Senior UX designer at IBM iX.
+          Hi, I’m Michelle, an Associate Design Director of UX Design at IBM.
         </span>
+        <br>
         <span class="sub-intro-text">
-          I have 10+ years of experience working with customers and clients to deliver meaningful experiences to users.
+          With a background in customer service and brand partnerships, I have a deep understanding of the unique needs of diverse users by cultivating relationships and creating solutions that drive both user satisfaction and business success.
+        </span>
+        <br>
+        <span class="sub-intro-text">
+          I led a successful redesign of an application used by thousands of employees in the retail sector, utilizing prototyping and usability testing to improve operational efficiency and service quality across the company.
+        </span>
+        <br>
+        <span class="sub-intro-text">
+          Outside of design, I love to run with my rescue dog Milo 🐕, pick up the latest book releases 📚, and perfect my matcha recipe 🍵.
         </span>
       </div>
     </div>
 
-    <div class="intro-bottom-container">
-      <div class="links-container">
-        <a href="https://www.linkedin.com/in/michellebaamonde/" class="social-icon" target="_blank">
-           <div>
-             <svg style="vertical-align: middle" stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseProfile="tiny" viewBox="0 0 24 24" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M8 19h-3v-10h3v10zm11 0h-3v-5.342c0-1.392-.496-2.085-1.479-2.085-.779 0-1.273.388-1.521 1.165v6.262h-3s.04-9 0-10h2.368l.183 2h.062c.615-1 1.598-1.678 2.946-1.678 1.025 0 1.854.285 2.487 1.001.637.717.954 1.679.954 3.03v5.647z"></path><ellipse cx="6.5" cy="6.5" rx="1.55" ry="1.5"></ellipse></svg>
-             <span class="no-mobile">&nbsp; LinkedIn</span>
-           </div>
-        </a>
-        <a href="https://www.instagram.com/michellepark/" class="social-icon" target="_blank">
-          <div>
-            <svg style="vertical-align: middle" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
-            <span class="no-mobile">&nbsp; Instagram</span>
-          </div>
-        </a>
-        <a href="mailto:michellebaamonde@gmail.com" class="social-icon" target="_blank">
-          <div><span class="material-icons" style="vertical-align: middle">mail_outline</span><span class="no-mobile">&nbsp; michellebaamonde@gmail.com</span></div>
-        </a>
-      </div>
-      <div></div> <!-- this div intentionally left for spacing-->
-      <div class="keep-scrolling">
-        <div class="click-to-scroll" (click)="onWorkClick($event)">
-          view my work
-          <br>
-          <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="40px" height="40px">
-            <path d="M0 0h24v24H0z" fill="none"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"/>
-          </svg>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="light-bg side-paddings full-min-height-no-header" #work>
-    <div class="recent-work">recent work</div>
+    <div class="recent-work" #work>recent work</div>
     <div class="case-card-grid-container">
-      <ng-container *ngFor="let case of caseStudies">
-        <case-card [name]="case.name"
+      <ng-container *ngFor="let case of caseStudies; let i = index">
+        <new-case-card [name]="case.name"
                    [description]="case.description"
                    [imgPath]="case.imgPath"
-                   [caption]="case.caption"
                    [caseUrl]="case.caseUrl"
-                   [fullWidth]="case.fullWidth">
-         </case-card>
+                   [fullWidth]="case.fullWidth"
+                   [index]="i">
+         </new-case-card>
       </ng-container>
     </div>
+
+    <hr>
+
+    <div class="recent-work">kind words from my colleagues</div>
+    <div class="kind-words-carousel">
+      <div class="mobile-button-container mobile-only">
+        <img src="assets/arrow_circle_left.svg" style="margin-right: 10px; cursor: pointer" (click)="incrementBlurb(-1)">
+        <img src="assets/arrow_circle_right.svg" style="margin-left: 10px; cursor: pointer" (click)="incrementBlurb(1)">
+      </div>
+      <img src="assets/arrow_circle_left.svg" class="no-mobile" style="margin-right: 10px; cursor: pointer" (click)="incrementBlurb(-1)">
+      <div class="kind-words-blurb" #blurbContent>
+        <!-- modified with js -->
+        <span>“Beyond her technical skills, Michelle’s proactive approach and initiative were truly standout qualities. She consistently took the lead on projects, identifying challenges and opportunities for improvement without needing explicit direction. Her resourcefulness and dedication were evident in every task she undertook, often exceeding expectations and delivering exceptional results. </span>
+        <br>
+        <br>
+        <span>Michelle’s collaborative spirit was equally impressive. She excelled in team settings, contributing thoughtfully to discussions, sharing her expertise, and fostering a positive, supportive environment. Her ability to work effectively with cross-functional teams, developers, and stakeholders was key to ensuring smooth project workflows and successful outcomes.”</span>
+        <br>
+        <br>
+        <span class="blurb-source">— Senior UX Designer and Design Lead, Client</span>
+      </div>
+      <img src="assets/arrow_circle_right.svg" class="no-mobile" style="margin-left: 10px; cursor: pointer" (click)="incrementBlurb(1)">
+    </div>
+
+  </div>
+  <div class="side-paddings" style="margin-bottom: 70px" #work>
+    
   </div>
 </div>

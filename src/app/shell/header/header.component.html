@@ -1,5 +1,6 @@
-<div class="dark-bg header side-paddings">
-  <img src ="assets/mb_logo.svg" class="clickable third" (click)="goTo('home')">
+<div class="light-bg header side-paddings">
+  <!-- <img src ="assets/mb-logo-script.svg" class="clickable logo" (click)="goTo('home')"> -->
+  <div class="header-link clickable name-logo">michelle baamonde</div>
   <div class="header-links-container">
     <ng-container *ngFor="let item of headerItems">
       <span class="header-link clickable"
@@ -8,5 +9,6 @@
         {{item}}
       </span>
     </ng-container>
+    <a class="header-link clickable resume" href="assets/Michelle Baamonde Resume 2025.pdf" target="_blank">resume</a>
   </div>
 </div>

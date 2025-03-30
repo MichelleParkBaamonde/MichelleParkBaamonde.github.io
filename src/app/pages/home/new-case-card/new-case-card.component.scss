@@ -1,0 +1,98 @@
+:host {
+  display: flex;
+}
+
+.case-card-container {
+  cursor: pointer;
+  padding: max(10px,min(40px, 3vw));
+  margin-top: 0px;
+  margin-left: 0px;
+  transition: transform 0.2s;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(calc(32vw * 1.28) * 0.8); //want height to be 1.28 of width to follow design. width is 32% of 80% of the screen (side paddings of 10%)
+}
+
+.case-card-container:hover {
+  transform: translate(-5px,-5px);
+  box-shadow: 5px 5px 5px grey;
+}
+
+.card-info-container {
+  height: calc(18vw - max(10px,min(40px, 3vw)));
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  height: calc(19vw - max(10px,min(40px, 3vw)));
+}
+
+.case-thumbnail {
+  max-width: 100%;
+  max-height: calc(19vw - max(10px,min(40px, 3vw)));
+}
+
+.name {
+  font-family: 'Lora';
+  font-weight: 700;
+  font-size: 1.6vw;
+  padding: 8px 0px;
+}
+
+.description {
+  font-weight: 400;
+  font-size: 1.2vw;
+  margin-bottom: 2vw;
+}
+
+@media only screen and (max-width: 600px) {
+  :host {
+    flex-basis: 100% !important;
+  }
+ 
+  .case-card-container {
+     padding: 1em;
+     margin-top: 0px;
+     margin-left: 0px;
+     transition: transform 0.2s;
+     width: 100%;
+     border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     height: calc(128vw * 0.8); //want height to be 1.28 of width to follow design. width is 32% of 80% of the screen (side paddings of 10%)
+     margin-bottom: 1.5em;
+   }
+ 
+   .card-info-container {
+     height: calc(56vw - 1em);
+   }
+   
+   .thumbnail-container {
+     display: flex;
+     justify-content: center;
+     height: calc(58vw - 1em);
+   }
+   
+   .case-thumbnail {
+     max-width: 100%;
+     max-height: calc(58vw - 1em);
+   }
+   
+   .name {
+     font-family: 'Lora';
+     font-weight: 700;
+     font-size: 1.5em;
+     padding: 8px 0px;
+   }
+   
+   .description {
+     font-weight: 500;
+     font-size: 0.8em;
+     margin-bottom: 1em;
+   }
+ }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
 import { Router, NavigationEnd } from '@angular/router';
 import { ParamsService } from '../../service/params.service';
 
@@ -11,12 +10,11 @@ import { ParamsService } from '../../service/params.service';
 export class HeaderComponent {
   currentRoute: string = '';
 
-  headerItems = ['work', 'about']
+  headerItems = ['work']
 
   constructor(
     private router: Router,
     private paramsService: ParamsService,
-    private location: Location
   ){
     this.router.events.subscribe((event) => {
       if(event instanceof NavigationEnd){
@@ -26,9 +24,7 @@ export class HeaderComponent {
   }
 
   goTo(url): void {
-    if(url === 'work'){
-      this.paramsService.setWork();
-    }
+    this.paramsService.setWork();
     this.router.navigate([url]);
   }
 }
