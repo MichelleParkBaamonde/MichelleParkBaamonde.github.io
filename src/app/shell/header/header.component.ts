@@ -23,8 +23,10 @@ export class HeaderComponent {
     });
   }
 
-  goTo(url): void {
-    this.paramsService.setWork();
+  goTo(url = ''): void {
+    if(url === 'work'){
+      this.paramsService.setWork();
+    }
     this.router.navigate([url]);
   }
 }

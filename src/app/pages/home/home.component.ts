@@ -63,7 +63,7 @@ export class HomeComponent {
     `<span>“You are so welcoming and your transparency and friendliness has helped me make a personal connection at IBM! Since day one, you made it clear that you are open to any questions and available to help, and I really appreciate that you are always checking in and considering my experience on top of your own so that I can learn and get involved. And you always make sure I get credit regardless of the size of my involvement!”</span>
     <br>
     <br>
-    <span class="blurb-source">— Summer Intern, IBM</span>`
+    <span class="blurb-source">— US Design Summer Intern, IBM</span>`
   ];
 
   transitioning = false;
