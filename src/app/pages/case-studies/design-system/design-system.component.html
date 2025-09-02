@@ -1,6 +1,153 @@
 <div class="top-of-page "#topOfPage></div>
+<div class="side-paddings case-container">
+  <div class="mobile-only mobile-text">Mobile layout under construction. Please view this case study on a full size screen!</div>
+  <div class="no-mobile">
+    <div class="case-title case-partial-width">Building a design system for an automotive retailer</div>
 
-<div class="mobile-text">
-  This page is under construction. Check back soon!
+    <div class="case-metadata case-section case-partial-width">
+      <p>Timeline: January - July 2024</p>
+      <p>Role: Senior UX Designer</p>
+      <p style="margin-bottom: 0px">Team: Design Lead (2), Senior UX Designer (2)</p>
+    </div>
+
+    <hr class="case-section" style="margin-top: 0px;">
+
+    <div class="case-section case-partial-width">
+      <div class="case-subtitle">Problem</div>
+      <span class="case-content">The POS application was built in six separate workstreams. There was no design system in place during the team’s Sketch to Figma migration, so each Design Lead created their own components. Our team identified inconsistencies across different areas of the application.</span>
+    </div>
+
+    <div class="case-section case-partial-width">
+      <div class="case-subtitle">Solution</div>
+      <span class="case-content">Implement the new design system to help current and future designers design more efficiently and ensure UX/UI consistency across the client’s desktop and mobile applications.</span>
+    </div>
+
+    <div class="case-section case-partial-width">
+      <div class="case-subtitle">Approach</div>
+      <span class="case-content">Collaborated with designers on auditing existing files to create a common component library as a starting point, consolidated and removed redundant components, and created local components and supporting variants for our workstream.</span>
+    </div>
+    
+    <div class="case-section">
+      <div class="case-subtitle">Customer Service List Components</div>
+      <div class="quarter3to1-container">
+        <div style="height:fit-content">
+          <div class="case-content case-section">The Customer Service List has the largest number of screens to account for various in-store scenarios. How might we speed up the process when designing the customer information cards?</div>
+        </div>
+        <div style="align-items:flex-start">
+          <img src="assets/3 Design System/3 Customer Service List.png"
+               class="content-image-big"
+               (click)="openDialog('assets/3 Design System/3 Customer Service List.png')">
+            <div class="case-card-title">Customer Service List</div>
+          </div>
+      </div>
+      <br>
+      <div class="case-card card-5 case-section case-card-grid-container">
+        <img src="assets/3 Design System/cs list.png"
+               class="half"
+               style="cursor: zoom-in;"
+               (click)="openDialog('assets/3 Design System/cs list.png')">
+        <div style="margin-left: 20px;">
+          <div style="display: flex;">
+            <div class="number-bullet">
+              1
+            </div>
+            <div>
+              <div class="case-card-title">Service Type Indicators</div>
+              <div class="case-content">Created variants for each indicator combination.</div>
+            </div>
+          </div>
+          <br>
+          <br>
+          <div style="display: flex;">
+            <div class="number-bullet">
+              2
+            </div>
+            <div>
+              <div class="case-card-title">Card Header Variants</div>
+              <div class="case-content">Combined the indicators with other elements of the Card Header to make it easier to swap variants out when editing customer information cards.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="case-section" style="margin-top: 0px;">
+
+    <div class="case-section case-partial-width">
+      <div class="case-subtitle">Modal Layouts</div>
+      <span class="case-content">How might we make it easier to recreate the 80+ modals across Work Order Management?</span>
+    </div>
+
+    <div class="case-card card-5 case-section case-card-grid-container">
+      <img src="assets/3 Design System/modal layouts.png"
+          class="half"
+          style="cursor: zoom-in;"
+          (click)="openDialog('assets/3 Design System/modal layouts.png')">
+      <div style="margin-left: 20px">
+        <div style="display: flex;">
+          <div class="number-bullet">
+            1
+          </div>
+          <div>
+            <div class="case-card-title" style="line-height: 50px;">Modal - base component</div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div style="display: flex;">
+          <div class="number-bullet">
+            2
+          </div>
+          <div>
+            <div class="case-card-title">Modal - local component</div>
+            <div class="case-content">
+              <ul>
+                <li>
+                  Created a “Modal Content” component with the option to turn on/off each section to account for different modal types.
+                </li>
+                <li>
+                  Labeled variants and properties in a consistent way to make it easy for other designers to understand the different states and ways to modify (turn certain properties on/off) to reach the desired component.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex;">
+          <div class="number-bullet">
+            3
+          </div>
+          <div>
+            <div class="case-card-title">Final Modal examples</div>
+            <div class="case-content">Started with the base component and utilized elements of the local component</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="case-section" style="margin-top: 0px;">
+
+    <div class="case-section case-partial-width">
+      <div class="case-subtitle">Impact</div>
+      <ul class="case-content">
+        <li>
+          Utilizing pre-made components and patterns improves productivity and reduces time and effort for designers when delivering ongoing enhancements to the POS application.
+        </li>
+        <li>
+          Providing clear categories and documentation in the design system allows new designers to onboard more smoothly and understand how the components are meant to be used.
+        </li>
+        <li>
+          Using one source of truth across the client’s design organization unifies the team and maintains UX/UI consistency.
+        </li>
+      </ul>
+    </div>
+
+    <hr class="case-section" style="margin-top: 0px;">
+    
+    <div class="nav-buttons-container case-section">
+      <button mat-stroked-button (click)="goTo('mobile-pos')" class="nav-button">← &nbsp; Case Study: Mobile POS</button>
+      <button mat-flat-button (click)="scrollToTop()" class="nav-button">↑ &nbsp; back to top</button>
+      <button mat-stroked-button (click)="goTo('desktop-pos')" class="nav-button">Case Study: Desktop POS &nbsp; →</button>
+    </div>
+  </div>
 </div>
 
