@@ -18,6 +18,6 @@ export class AppComponent {
         window.scrollTo(0, 0);
       }
     });
-    this.title.setTitle("Michelle Baamonde Portfolio");
+    this.title.setTitle("Michelle Park-Baamonde Portfolio");
   }
 }
